@@ -255,6 +255,24 @@ class ProfissionalController extends Controller
             'password' => $profissional->password
         ]);
     }
+
+    public function excluirProfissional($id)
+    {
+        $profissional = Profissional::find($id);
+
+        if (!isset($profissional)) {
+            return response()->json([
+                'status' => false,
+                'message' => "profissional não encontrado"
+            ]);
+        }
+
+        $profissional->delete();
+        return response()->json([
+            'status' => true,
+            'message' => "profissional excluido com sucesso"
+        ]);
+    }
 }
 
 

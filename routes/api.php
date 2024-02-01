@@ -47,13 +47,13 @@ Route::delete('adm/excluir/servico/{id}', [ServicoController::class, 'excluirSer
 
 //--------------------------------------------Pesquisas-Cliente-------------------------------------------------
 
-Route::post('adm/pesquisar/nome/cliente', [ClientesController::class, 'pesquisarClientePorNome']);
+Route::get('adm/pesquisar/nome/cliente', [ClientesController::class, 'pesquisarClientePorNome']);
 
-Route::post('adm/pesquisar/cpf/cliente', [ClientesController::class, 'pesquisarClientePorCpf']);
+Route::get('adm/pesquisar/cpf/cliente', [ClientesController::class, 'pesquisarClientePorCpf']);
 
-Route::post('adm/pesquisar/celular/cliente', [ClientesController::class, 'pesquisarClientePorCelular']);
+Route::get('adm/pesquisar/celular/cliente', [ClientesController::class, 'pesquisarClientePorCelular']);
 
-Route::post('adm/pesquisar/email/cliente', [ClientesController::class, 'pesquisarClientePorEmail']);
+Route::get('adm/pesquisar/email/cliente', [ClientesController::class, 'pesquisarClientePorEmail']);
 
 Route::get('adm/find/cliente/{id}',[ClientesController::class, 'pesquisarPorId']);
 //------------------------------------------Pesquisas-Profissionais---------------------------------------------
